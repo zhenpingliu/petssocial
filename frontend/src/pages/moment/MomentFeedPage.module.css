@@ -1,0 +1,147 @@
+.page {
+  min-height: calc(100vh - 100px);
+}
+
+.toolbar {
+  padding: 8px 16px;
+  display: flex;
+  justify-content: flex-end;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.feed {
+  padding: 0;
+}
+
+.card {
+  background: #fff;
+  border-bottom: 8px solid #f5f5f5;
+  padding: 16px;
+}
+
+.cardHeader {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.avatarFallback {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #ffb3b3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.userInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.nickname {
+  font-weight: 600;
+  font-size: 15px;
+  color: #333;
+}
+
+.petTag {
+  font-size: 12px;
+  color: #ff6b6b;
+  background: #fff0f0;
+  padding: 2px 8px;
+  border-radius: 10px;
+  display: inline-block;
+  width: fit-content;
+}
+
+.time {
+  font-size: 12px;
+  color: #999;
+}
+
+.content {
+  font-size: 15px;
+  color: #333;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  white-space: pre-wrap;
+}
+
+/* 单张图片 — 宽幅展示 */
+.images1 {
+  margin-bottom: 10px;
+}
+
+.images1 .image {
+  width: 65%;
+  aspect-ratio: 4/3;
+}
+
+/* 两张图片 — 两列 */
+.images2 {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4px;
+  margin-bottom: 10px;
+}
+
+.images2 .image {
+  width: 100%;
+  aspect-ratio: 1;
+}
+
+/* 三张及以上 — 三列 */
+.images3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+  margin-bottom: 10px;
+}
+
+.images3 .image {
+  width: 100%;
+  aspect-ratio: 1;
+}
+
+.location {
+  font-size: 13px;
+  color: #999;
+  margin-bottom: 10px;
+}
+
+.actions {
+  display: flex;
+  gap: 16px;
+  padding-top: 8px;
+  border-top: 1px solid #f8f8f8;
+}
+
+.actionBtn {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: none;
+  border: none;
+  color: #999;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 6px;
+  transition: all 0.2s;
+}
+
+.actionBtn:active {
+  background: #f5f5f5;
+}
+
+.liked {
+  color: #ff4d4f;
+}

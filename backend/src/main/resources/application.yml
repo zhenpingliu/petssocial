@@ -1,0 +1,65 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /api
+
+spring:
+  application:
+    name: petssocial-backend
+
+  # MySQL Database Configuration
+  datasource:
+    url: jdbc:mysql://localhost:3306/petssocial?useUnicode=true&characterEncoding=utf-8&useSSL=false&serverTimezone=Asia/Shanghai&allowPublicKeyRetrieval=true
+    username: root
+    password: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  # Redis Configuration
+  data:
+    redis:
+      host: localhost
+      port: 6379
+      password:
+      database: 0
+      timeout: 3000ms
+
+  # Jackson Configuration
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+
+# MyBatis-Plus Configuration
+mybatis-plus:
+  mapper-locations: classpath*:/mapper/**/*.xml
+  type-aliases-package: com.petssocial.entity
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      id-type: ASSIGN_ID
+      logic-delete-field: deleted
+      logic-delete-value: 1
+      logic-not-delete-value: 0
+
+# JWT Configuration
+jwt:
+  secret: pets-social-secret-key-2024-very-long-secret-key-for-hs512
+  access-token-expiration: 3600
+  refresh-token-expiration: 86400
+
+# Knife4j Configuration
+knife4j:
+  enable: true
+  openapi:
+    title: PetsSocial API Documentation
+    description: PetsSocial Backend API Documentation
+    version: 1.0.0
+    contact:
+      name: PetsSocial Team
+    group:
+      default:
+        group-name: default
+        api-rule: package
+        api-rule-resources:
+          - com.petssocial.controller

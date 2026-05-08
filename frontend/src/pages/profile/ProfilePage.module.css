@@ -1,0 +1,87 @@
+.page {
+  min-height: calc(100vh - 100px);
+  background: #f5f5f5;
+}
+
+.header {
+  background: linear-gradient(135deg, #ff9a8b, #fecfef);
+  padding: 24px 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  position: relative;
+}
+
+.avatarFallback {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  font-weight: 700;
+  color: #fff;
+  backdrop-filter: blur(4px);
+}
+
+.userInfo {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.nickname {
+  font-size: 20px;
+  font-weight: 700;
+  color: #333;
+}
+
+.phone {
+  font-size: 14px;
+  color: #666;
+}
+
+.bio {
+  font-size: 13px;
+  color: #888;
+  margin-top: 2px;
+}
+
+.editBtn {
+  position: absolute;
+  top: 20px;
+  right: 16px;
+  color: #666;
+}
+
+.list {
+  margin-top: 12px;
+}
+
+.logoutWrap {
+  padding: 24px 16px;
+}
+
+.popupHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px 16px;
+  border-bottom: 1px solid #f0f0f0;
+  margin-bottom: 8px;
+}
+
+.popupTitle {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.popupClose {
+  color: #999;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 4px 8px;
+}

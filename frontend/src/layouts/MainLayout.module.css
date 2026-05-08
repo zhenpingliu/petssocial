@@ -1,0 +1,28 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  max-width: 480px;
+  margin: 0 auto;
+  background: #fff;
+}
+
+.navbar {
+  flex-shrink: 0;
+  background: #fff;
+  border-bottom: 1px solid #f0f0f0;
+  font-weight: 600;
+  font-size: 17px;
+}
+
+.content {
+  flex: 1;
+  overflow-y: auto;
+  padding-bottom: 0;
+  -webkit-overflow-scrolling: touch;
+}
+
+.tabbar {
+  flex-shrink: 0;
+  border-top: 1px solid #f0f0f0;
+}

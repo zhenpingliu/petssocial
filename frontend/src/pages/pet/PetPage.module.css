@@ -1,0 +1,189 @@
+.page {
+  padding: 12px;
+  min-height: calc(100vh - 100px);
+  background: #f5f5f5;
+}
+
+/* ---- 卡片网格布局 ---- */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+}
+
+.cardCover {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  background: #f9f9f9;
+}
+
+.cardImage {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.cardPlaceholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  background: linear-gradient(135deg, #fff5f5 0%, #fff0f6 100%);
+}
+
+.cardActions {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  gap: 4px;
+}
+
+.cardActionBtn {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.85);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #666;
+  padding: 0;
+  backdrop-filter: blur(4px);
+}
+
+.cardActionBtn:active {
+  background: rgba(255, 255, 255, 1);
+}
+
+.speciesTag {
+  position: absolute;
+  bottom: 8px;
+  left: 8px;
+  font-size: 11px;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(4px);
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+
+.cardInfo {
+  padding: 10px 12px 12px;
+}
+
+.cardName {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.cardMeta {
+  font-size: 12px;
+  color: #999;
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.cardBio {
+  font-size: 12px;
+  color: #666;
+  margin-top: 6px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ---- 弹窗表单 ---- */
+.avatarPicker {
+  display: flex;
+  align-items: center;
+}
+
+.avatarPreviewWrap {
+  position: relative;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.avatarPreview {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.avatarRemove {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+}
+
+.avatarAddBtn {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  border: 2px dashed #ddd;
+  background: #fafafa;
+  color: #bbb;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  cursor: pointer;
+  font-size: 12px;
+  padding: 0;
+}
+
+.avatarAddBtn:active {
+  background: #f0f0f0;
+  border-color: #ccc;
+}
+
+.popupHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px 16px;
+  border-bottom: 1px solid #f0f0f0;
+  margin-bottom: 8px;
+}
+
+.popupTitle {
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.popupClose {
+  color: #999;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 4px 8px;
+}
